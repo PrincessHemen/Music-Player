@@ -6,6 +6,54 @@ let fastForwardButton = document.getElementById("fastForward");
 let songTitle = document.querySelector(".music-player h1");
 let songSinger = document.querySelector(".music-player p");
 
+// Define an array of songs with their information
+const songs = [
+    {
+      title: "Gold",
+      singer: "ImagineDragons",
+      file: "./media/Gold_ImagineDragons.mp3"
+    },
+    {
+      title: "HallelujahEh",
+      singer: "NathanielBassey",
+      file: "./media/HallelujahEh_NathanielBassey.mp3"
+    },
+    {
+        title: "ScarsToYourBeautiful",
+        singer: "AlessiaCara",
+        file: "./media/ScarsToYourBeautiful.mp3"
+    },
+    // Add more songs as needed
+];
+  
+let currentSongIndex = 0;
+  
+function loadCurrentSong() {
+   let currentSong = songs[currentSongIndex];
+   song.src = currentSong.file;
+  
+   // Set the song title and singer based on the current song
+   songTitle.textContent = currentSong.title;
+   songSinger.textContent = currentSong.singer;
+  
+   // Reset progress and play icon
+   progress.value = 0;
+   ctrlIcon.src = "./images/play-button-arrowhead.png";
+}
+
+function lastSong() {
+    // Move to the previous song in the list
+    currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+    loadCurrentSong();
+};
+  
+// Event listener for the right arrow (next song)
+function nextSong() {
+    // Move to the next song in the list
+    currentSongIndex = (currentSongIndex + 1) % songs.length;
+    loadCurrentSong(); 
+};
+
 
 song.addEventListener('loadeddata', function () {
     // Extract information from the loaded audio file path
