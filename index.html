@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="music-player">
+        <nav>
+          <div class="circle" style="cursor: pointer">
+            <img src="./images/back-arrow.png" />
+          </div>
+          <div class="circle" style="cursor: pointer">
+            <img src="./images/arrow-right.png" />
+          </div>
+        </nav>
+        <img
+          src="./media/2a61cd92-7f79-4732-b4a0-77aab1fdc016.jfif"
+          class="song-img"
+        />
+        <h1 class="songtitle">Despacito</h1>
+        <p class="songsinger">Luis Fonsi Ft Daddy Yankee</p>
+
+        <audio id="song">
+          <source
+            src="./media/HallelujahEh_NathanielBassey.mp3"
+            type="audio/mpeg"
+          />
+        </audio>
+
+        <input type="range" value="0" id="progress" />
+
+        <div class="controls">
+          <div id="rewind"><img src="./images/rewind.png" /></div>
+          <div onclick="playPause()">
+            <img
+              src="./images/play-button-arrowhead.png"
+              id="ctrlIcon"
+              class="play"
+            />
+          </div>
+          <div id="fastForward"><img src="./images/fast-forward.png" /></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
