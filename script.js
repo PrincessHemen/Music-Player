@@ -21,7 +21,7 @@ const songs = [
     {
         title: "ScarsToYourBeautiful",
         singer: "AlessiaCara",
-        file: "./media/ScarsToYourBeautiful.mp3"
+        file: "./media/ScarsToYourBeautiful_AlessiaCara.mp3"
     },
     // Add more songs as needed
 ];
